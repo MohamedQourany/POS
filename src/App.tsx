@@ -3,14 +3,14 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import Sider from "antd/es/layout/Sider";
-import { Card, Image, Menu, Typography } from "antd";
+import { Button, Card, Image, Menu, Typography } from "antd";
 import {
   ArrowsAltOutlined,
   BorderOuterOutlined,
   DashboardOutlined,
   LogoutOutlined,
 } from "@ant-design/icons";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import Homepage from "./Pages/HomePage/Homepage";
 
 function App() {
@@ -26,7 +26,9 @@ function App() {
         <Typography.Text>Logo</Typography.Text>
         <Menu theme="light" style={{ height: "100vh", marginTop: 10 }}>
           <Card className="card">
-            <Typography.Text>New Order</Typography.Text>
+            <Button>
+              <Link to={"/NewOrder"}>New Order</Link>
+            </Button>
             <BorderOuterOutlined />
           </Card>
           <Card className="card">
