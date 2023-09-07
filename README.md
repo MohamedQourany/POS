@@ -1,5 +1,5 @@
 # React + TypeScript + Vite
-
+https://www.figma.com/file/xwf9xTqnX7Ij322MeGIaRR/Fast-Food-Point-Of-Sales-UI-Kit-%7C-iPad-and-iPhone-(Community)?type=design&node-id=0%3A1&mode=design&t=Cf40TMo7kRCGocSU-1
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
