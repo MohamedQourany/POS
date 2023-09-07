@@ -10,12 +10,14 @@ import {
   DashboardOutlined,
   LogoutOutlined,
 } from "@ant-design/icons";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Homepage from "./Pages/HomePage/Homepage";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
+    <BrowserRouter>
       <Sider
         className="sider"
         theme="light"
@@ -41,7 +43,10 @@ function App() {
           </Card>
         </Menu>
       </Sider>
-    </>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
