@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import Sider from "antd/es/layout/Sider";
+import { Card, Image, Menu, Typography } from "antd";
+import {
+  ArrowsAltOutlined,
+  BorderOuterOutlined,
+  DashboardOutlined,
+  LogoutOutlined,
+} from "@ant-design/icons";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Sider
+        className="sider"
+        theme="light"
+        style={{ height: "100vh", padding: 10 }}
+      >
+        <Typography.Text>Logo</Typography.Text>
+        <Menu theme="light" style={{ height: "100vh", marginTop: 10 }}>
+          <Card className="card">
+            <Typography.Text>New Order</Typography.Text>
+            <BorderOuterOutlined />
+          </Card>
+          <Card className="card">
+            <Typography.Text>Dashboard</Typography.Text>
+            <BorderOuterOutlined />
+          </Card>
+          <Card className="card">
+            <Typography.Text>Settings</Typography.Text>
+            <BorderOuterOutlined />
+          </Card>
+          <Card className="card">
+            <Typography.Text>Logout</Typography.Text>
+            <BorderOuterOutlined />
+          </Card>
+        </Menu>
+      </Sider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
